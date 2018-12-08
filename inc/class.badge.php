@@ -9,9 +9,8 @@ require_once ("abstract.class.php");
 
 class Badge extends Component {
 	public $tag = "span"; 
-	public $type = "badge"; 
+	public $family = "badge"; 
 	
-	public $dismissible = false; 
 	
 	public $color_prefix = "badge-";
 	

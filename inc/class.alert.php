@@ -2,14 +2,14 @@
 require_once ("abstract.class.php");
 
 /**
- * Alerts class for Bootstrap components.
+ * Alert class for Bootstrap components.
  * Source: https://getbootstrap.com/docs/4.1/components/alerts/
  * @bpstr Project Lifera <dev@lifera.hu> 
  */
 
 class Alert extends Component {
 	public $tag = "div"; 
-	public $type = "alert"; 
+	public $family = "alert"; 
 	
 	public $dismissible = false; 
 	
