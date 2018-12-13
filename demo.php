@@ -89,7 +89,7 @@
 			<div class="col-sm-12">
 				<h1>Cards</h1>
 			</div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
+			<div class="col-sm-12 col-md-5 col-lg-4">
 				<h2>Kitchen sink</h2>
 				<?php 
 					$content = new CardBody ("Given text on construct.");
@@ -109,18 +109,14 @@
 					echo $card;
 				?>
 			</div>
+			<div class="col-sm-12 col-md-7 col-lg-8">
+				<h2>Navigation</h2>
+			</div>
 			
 			<!-- Carousel -->
 			<div class="col-sm-12 col-lg-6">
 				<h2>Carousel</h2>
 				<?php 
-					// $content = new CardBody ("Given text on construct.");
-					// $content->addTitle("Card title");
-					// $content->addText("Some quick example text to build on the card title and make up the bulk of the card's content.");
-					
-					// $links = new CardBody();
-					// $links->addLink("Card link");
-					// $links->addLink("Another link");
 					
 					$items = array();
 					$items[] = new CarouselItem("https://via.placeholder.com/1420x690.png?text=Visit:placeholder", "Image Alt");
@@ -133,6 +129,29 @@
 					$carousel->indicators();
 					
 					echo $carousel;
+				?>
+			</div>
+			
+			<div class="col-sm-12 col-md-8">
+				<h2>Collapse</h2>
+			</div> 
+			
+			<!-- Dropdown -->
+			<div class="col-sm-12 col-md-4">
+				<h2>Dropdown</h2>
+				<?php 
+					
+					$items = array();
+					$items[] = (new Anchor("Image Alt", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder"))->addClass("dropdown-item");
+					$items[] = new Anchor("Image Alt", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder");
+					$items[] = new Anchor("Image Alt", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder");
+					
+					$dropdown = new Dropdown("Simple Dropdown", $items);
+					echo $dropdown."<br><br>";
+					
+					$dropdown = new Dropdown("", $items);
+					$dropdown->splitButton(new Button("Split button"));
+					echo $dropdown."<br><br>";
 				?>
 			</div>
 			
@@ -211,7 +230,7 @@
 			</div>
 
 			<!-- Jumbotron -->
-			<div class="col-sm-12 col-lg-6">
+			<div class="col-sm-12 col-lg-5">
 				<h2>Jumbotron</h2>
 				<?php 
 					$content = array(new Heading("Hello, world!", 1, 4), new Div ("Random text with <b>formatted</b> HTML."));
@@ -220,20 +239,72 @@
 				?>
 			</div>
 			
+			<!-- List group -->
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<h2>List group</h2> 
+				<?php 
+					
+					$items = array();
+					$items[] = (new Anchor("Image Alt 2", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder"))->addClass("active");
+					$items[] = new Anchor("Image Alt 3", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder");
+					$items[] = new Anchor("Image Alt 4", "https://via.placeholder.com/1420x690.png?text=Visit:placeholder");
+					
+					$listgroup = new ListGroup($items); 
+					echo $listgroup."<br><br>";
+				?>
+			</div>
 			
 			
+			<!-- Modal -->
+			<div class="col-sm-12 col-md-6 col-lg-3">
+				<h2>Modal</h2> 
+			</div>
 			
+			<!-- Navs -->
+			<div class="col-sm-12">
+				<h2>Navs</h2> 
+			</div>
+			
+			<!-- Navbar -->
+			<div class="col-sm-12">
+				<h2>Navbar</h2> 
+			</div>
+			
+
+			<!-- Pagination -->
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<h2>Pagination</h2> 
+			</div>
+			
+
+			<!-- Popovers -->
+			<div class="col-sm-12 col-md-6 col-lg-3">
+				<h2>Popovers</h2> 
+			</div>
+			 
 			<!-- Progress -->
-			<div class="col-sm-12 col-lg-6">
+			<div class="col-sm-12 col-lg-5">
 				<h2>Progress</h2>
 				<?php 
 					echo (new Progress(array(new ProgressBar(20))))."<br>";
 					$bar = new ProgressBar(25);
 					echo (new Progress(array($bar->secondary())))."<br>";
 					echo (new Progress(array(new ProgressBar(25, "secondary"), $bar->value(50)->success())))."<br>"; 
+					
 				?>
 			</div>
-		</div>
+			
+			<!-- Scrollspy -->
+			<div class="col-sm-12 col-md-6">
+				<h2>Scrollspy</h2> 
+			</div>
+			
+			<!-- Tooltips -->
+			<div class="col-sm-12 col-md-6">
+				<h2>Tooltips</h2> 
+			</div>
+			
+		</div> 
 	</div>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

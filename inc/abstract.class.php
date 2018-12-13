@@ -4,7 +4,9 @@
  * Source: https://getbootstrap.com/docs/4.1/components/
  * @bpstr Project Lifera <dev@lifera.hu>
  */
- 
+
+
+
 abstract class Component {
 	public $id = NULL;
 	public $tag;
@@ -129,6 +131,14 @@ abstract class Component {
 	
 	public function wrap (Component $wrap) {
 		$this->wrap = $wrap;
+	}
+	
+	public function before (Component $before) {
+		$this->before = $before;
+	}
+	
+	public function after (Component $after) {
+		$this->after = $after;
 	}
 	
 	/* Some class magic */

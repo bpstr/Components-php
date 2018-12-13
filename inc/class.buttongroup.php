@@ -31,11 +31,6 @@ class ButtonGroup extends Component {
 		return $this;
 	}
 	
-	
-	// public function addDropdown (Button $trigger, Dropdown $dropdown) {
-		
-	// } 
-	
 	public function large() {
 		$this->addClass("btn-group-lg");
 		return $this;
