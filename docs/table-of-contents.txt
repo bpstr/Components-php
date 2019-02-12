@@ -1,0 +1,81 @@
+Bootstrap Components
+--------------------
+
+**Content**
+
+- Typography:	HTML.heading + Bootstrap::Heading()
+- Code:			Bootstrap base class
+- Images:		HTML.image + Bootstrap::Image()
+- Tables:		HTML.table + Bootstrap::Table()
+- Figures:		HTML.image + Bootstrap::Image()
+
+
+**Components**
+
+- Alerts:		Components.Alert
+- Badges:		Components.Badge
+- Breadcrumb:	Components.*Nested*.Breadcrumb
+- Buttons:		Components.*Scalable*.Button
+- Button group:	Components.*Nested*.ButtonGroup
+- Cards:		Components.*Running*.Card
+- Carousel:		Components.*Nested*.Carousel
+- Collapse:		Components.Collapse
+- Dropdowns:	Components.*Nested*.Dropdown
+- Forms:		Components.Form **+ Components.FormControl**
+- Input group:	Components.*Nested*.InputGroup
+- Jumbotron:	Components.Jumbotron
+- List group:	Components.*Nested*.ListGroup
+- Media object:	*Components.Media*
+- Modal:		Components.*Running*.Modal
+- Navs:			Components.*Nested*.Nav
+- Navbar:		Components.*Nested*.Navbar
+- Pagination:	Components.*Nested*.Pagination
+- Popovers:		**Extensions.Popover**
+- Progress:		Components.*Nested*.Progress
+- Scrollspy:	**Extensions.Scrollspy**
+- Spinners:		Components.Spinner
+- Toasts:		Components.Toast
+- Tooltips:		**Extensions.Tooltip**
+
+Components.*nestedComponent*: `__construct($content)` is processed with inner `addItem()` function.
+
+Components.*runningComponent*: comes with Header and Footer
+
+Components.*scalableComponent*: `small()` and `large()` functions
+
+**Utilities**
+
+- Borders:		Utilities.Border
+- Clearfix:		**Bootstrap::Clearfix()**
+- Close icon:	**Bootstrap::Close()**
+- Colors:		*Bootstrap::CONSTANTS + Abstract.Component*
+- Display:		Utilities.Display
+- Embeds:		**Bootstrap::Embed()**
+- Flex:			Utilities.Flex
+- Float:		Utilities.Float
+- Image repl.:	*Has been deprecated as of v4.1*
+- Overflow:		Utilities.Overflow
+- Position:		Utilities.Position
+- Screenreader:	**???** / *Utilities.Screenreader*
+- Shadows:		Utilities.Shadow
+- Sizing:		**Utilities.Width + Utilities.Height**
+- Spacing:		**Utilities.Padding + Utilities.Margin**
+- Text:			**Utilities.Text + Utilities.Font**
+- Vertical a.:	Utilities.VAlign
+- Visibility:	Utilities.Visibility
+
+**Icons**
+
+Usage: `Bootstrap::Icon(name)`
+Supported libraries:
+
+- Google Material Icons: *styles & icons*
+- Font-awesome:	*styles & icons & premium?*
+- Flaticon: *custom libraries*
+
+**Bootstrap Consistent**
+
+Extend Bootstrap base CSS to make it more consistent. All utils to support breakpoints, more breakpoints, variable container sizes, etc.
+*Detailed documentation coming soon.*
+
+5:57

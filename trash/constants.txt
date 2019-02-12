@@ -1,0 +1,103 @@
+
+/**
+ * Bootstrap BREAKPOINTS
+ * @see https://getbootstrap.com/docs/4.2/layout/grid/#all-breakpoints
+ * @see https://getbootstrap.com/docs/4.2/layout/overview/#responsive-breakpoints
+ */
+
+define ("SCREEN_XSMALL", "xs");
+define ("SCREEN_SMALL",	 "sm");
+define ("SCREEN_MEDIUM", "md");
+define ("SCREEN_LARGE",	 "lg");
+define ("SCREEN_XLARGE", "xl");
+
+
+
+
+define ("DISPLAY_NONE", "none");
+define ("DISPLAY_INLINE", "inline");
+define ("DISPLAY_INLINE_BLOCK", "inline-block");
+define ("DISPLAY_BLOCK", "block");
+define ("DISPLAY_TABLE", "table");
+define ("DISPLAY_TABLE_CELL", "table-cell");
+define ("DISPLAY_TABLE_ROW", "table-row");
+define ("DISPLAY_FLEX", "flex");
+define ("DISPLAY_INLINE_FLEX", "inline-flex");
+
+define ("DIRECTION_TOP", "top");
+define ("DIRECTION_RIGHT", "right");
+define ("DIRECTION_BOTTOM", "bottom");
+define ("DIRECTION_LEFT", "left");
+
+
+define ("SIDE_TOP", "t");
+define ("SIDE_RIGHT", "r");
+define ("SIDE_BOTTOM", "b");
+define ("SIDE_LEFT", "l");
+define ("SIDE_X", "x");
+define ("SIDE_Y", "y");
+
+define ("POSITION_STATIC", "static");
+define ("POSITION_RELATIVE", "relative");
+define ("POSITION_ABSOLUTE", "absolute");
+define ("POSITION_FIXED", "fixed");
+define ("POSITION_STICKY", "sticky");
+
+define ("FONT_WEIGHT_BOLD", "font-weight-bold");
+define ("FONT_WEIGHT_BOLDER", "font-weight-bolder");
+define ("FONT_WEIGHT_NORMAL", "font-weight-normal");
+define ("FONT_WEIGHT_LIGHT", "font-weight-light");
+define ("FONT_WEIGHT_LIGHTER", "font-weight-lighter");
+define ("FONT_ITALIC", "font-italic");
+
+define ("TEXT_JUSTIFY", "text-justify");
+define ("TEXT_RIGHT", "text-right");
+define ("TEXT_CENTER", "text-center");
+define ("TEXT_LEFT", "text-left");
+define ("TEXT_NOWRAP", "text-nowrap");
+define ("TEXT_TRUNCATE", "text-truncate");
+define ("TEXT_LOWERCASE", "text-lowercase");
+define ("TEXT_UPPERCASE", "text-uppercase");
+define ("TEXT_CAPITALIZE", "text-capitalize");
+define ("TEXT_MONOSPACE", "text-monospace");
+
+define ("TEXT_COLOR_PRIMARY", "text-primary");
+define ("TEXT_COLOR_SECONDARY", "text-secondary");
+define ("TEXT_COLOR_SUCCESS", "text-success");
+define ("TEXT_COLOR_DANGER", "text-danger");
+define ("TEXT_COLOR_WARNING", "text-warning");
+define ("TEXT_COLOR_INFO", "text-info");
+define ("TEXT_COLOR_LIGHT", "text-light");
+define ("TEXT_COLOR_DARK", "text-dark");
+
+
+
+$allshite = array(
+array ("BREAKPOINT", array('sm', 'md', 'lg', 'xl')),
+array ("GRADIENT", array('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark')),
+array ("DISPLAY", array('none', 'inline', 'inline-block', 'block', 'table', 'table-cell', 'table-row', 'flex', 'inline-flex')),
+array ("DIRECTION", array('top', 'right', 'bottom', 'left')),
+array ("SIDE", array('t', 'r', 'b', 'l', 'x', 'y')),
+array ("POSITION", array('static', 'relative', 'absolute', 'fixed', 'sticky')),
+array ("FONT", array('weight-bold', 'weight-bolder', 'weight-normal', 'weight-light', 'weight-lighter', 'italic')),
+array ("TEXT", array('justify', 'right', 'center', 'left', 'nowrap', 'truncate', 'lowercase', 'uppercase', 'capitalize', 'monospace')));
+// foreach (...);
+echo "<pre>";
+foreach ($allshite as $key => $value) {
+	foreach ($value[1] as $k => $v) {
+		echo 'const ';
+		// echo $value[0]."_";
+		echo strtoupper($v);
+		echo ' = "';
+		echo $v;
+		echo '";'."\n";
+		continue;
+		echo 'define ("TEXT_';
+		echo $value[0]."_";
+		echo strtoupper($v);
+		echo '", "text-';
+		echo $v;
+		echo '");';
+		echo "\n";
+	}
+}

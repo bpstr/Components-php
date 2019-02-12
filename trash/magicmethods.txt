@@ -1,0 +1,12 @@
+/**
+ * should be avoiding "magic methods", use functions instead...
+ * @source https://stackoverflow.com/questions/47882
+ */
+define ("BREAKPOINTS", array('sm', 'md', 'lg', 'xl'));
+define ("CONTEXTUALS", array('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'));
+define ("DISPLAY_VALUES", array('none', 'inline', 'inline-block', 'block', 'table', 'table-cell', 'table-row', 'flex', 'inline-flex'));
+define ("DIRECTIONS", array('top', 'right', 'bottom', 'left'));
+define ("SPACING_SIDES", array('t', 'r', 'b', 'l', 'x', 'y'));
+define ("POSITIONS", array('static', 'relative', 'absolute', 'fixed', 'sticky'));
+define ("FONT_UTILS", array('weight-bold', 'weight-bolder', 'weight-normal', 'weight-light', 'weight-lighter', 'italic'));
+define ("TEXT_UTILS", array('justify', 'right', 'center', 'left', 'nowrap', 'truncate', 'lowercase', 'uppercase', 'capitalize', 'monospace'));

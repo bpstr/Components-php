@@ -1,0 +1,36 @@
+// Include basic HTML elements
+
+
+require_once ("inc/data.anchor.php");
+require_once ("inc/data.division.php");
+require_once ("inc/data.heading.php");
+require_once ("inc/data.input.php");
+require_once ("inc/data.select.php");
+require_once ("inc/data.textarea.php");
+require_once ("inc/data.image.php");
+
+// Include bootstrap files
+
+require_once ("inc/util.border.php");
+
+require_once ("inc/abstract.component.php");
+
+require_once ("inc/class.alert.php");
+require_once ("inc/class.badge.php");
+require_once ("inc/class.breadcrumb.php");
+require_once ("inc/class.button.php");
+require_once ("inc/class.buttongroup.php");
+require_once ("inc/class.card.php");
+require_once ("inc/class.carousel.php");
+
+require_once ("inc/class.dropdown.php");
+require_once ("inc/class.form.php");
+require_once ("inc/class.jumbotron.php");
+require_once ("inc/class.listgroup.php");
+
+require_once ("inc/class.nav.php");
+require_once ("inc/class.navbar.php");
+
+
+
+require_once ("inc/class.progress.php");

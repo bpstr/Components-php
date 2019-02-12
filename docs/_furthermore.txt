@@ -1,0 +1,6 @@
+Abstract element
+- Add content callback function
+	Great use: class.alerts.php
+		if ($content instanceof Element && $content->tag == h*) {
+			$content->addClass("alert-heading");
+		}
