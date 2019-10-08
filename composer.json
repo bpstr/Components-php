@@ -1,0 +1,27 @@
+{
+  "name": "bpstr/components-php",
+  "description": "Generate bootstrap components",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BPSTR",
+      "email": "bpstr@gmx.tm"
+    }
+  ],
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "bin-dir": "bin"
+  },
+  "require": {
+    "bpstr/elements-php": "dev-master"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Bpstr\\Components\\": "src/"
+    }
+  },
+  "autoload-dev": {}
+}

@@ -1,0 +1,50 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a7f66e8b917625efca4ae33e9707adc0",
+    "packages": [
+        {
+            "name": "bpstr/elements-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bpstr/elements-php.git",
+                "reference": "8fc4ca2078132ae25a70fd663b1ddc14ebb1f366"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bpstr/elements-php/zipball/8fc4ca2078132ae25a70fd663b1ddc14ebb1f366",
+                "reference": "8fc4ca2078132ae25a70fd663b1ddc14ebb1f366",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bpstr\\Elements\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple PHP library to render HTML elements.",
+            "time": "2019-10-08T19:19:15+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "bpstr/elements-php": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
