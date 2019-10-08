@@ -38,15 +38,6 @@ class Bootstrap {
 	 * @link https://getbootstrap.com/docs/4.2/utilities/colors/
 	 * Used: utils.text
 	 */
-	const COLOR_PRIMARY   = 'primary';
-	const COLOR_SECONDARY = 'secondary';
-	const COLOR_SUCCESS   = 'success';
-	const COLOR_DANGER    = 'danger';
-	const COLOR_WARNING   = 'warning';
-	const COLOR_INFO	  = 'info';
-	const COLOR_LIGHT	  = 'light';
-	const COLOR_DARK	  = 'dark';
-
 	const TEXT_PRIMARY 	 = 'text-primary';
 	const TEXT_SECONDARY = 'text-secondary';
 	const TEXT_SUCCESS 	 = 'text-success';
@@ -138,6 +129,8 @@ class Bootstrap {
 	 *
 	 * @link https://getbootstrap.com/docs/4.2/utilities/close-icon/
 	 * @todo Move?
+	 *
+	 * @see \Bpstr\Components\Bootstrap\Component\Alert::dismissible
 	 */
 	public static function CloseIcon ($symbol = "&#x2715;", $label = self::LABEL_CLOSE) {
 		$span = Element::create('span', $symbol)->attr('aria-hidden', 'true');
