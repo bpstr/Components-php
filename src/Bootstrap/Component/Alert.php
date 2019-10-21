@@ -3,7 +3,7 @@
 namespace Bpstr\Components\Bootstrap\Component;
 
 use Bpstr\Components\Bootstrap;
-use Bpstr\Components\Bootstrap\Behaviours\ContextualAvareFamilyPrefixedComponent;
+use Bpstr\Components\Bootstrap\Behaviour\FamilyPrefixedContextualAwareComponent;
 use Bpstr\Components\Bootstrap\Contextual;
 use Bpstr\Elements\Html\Element;
 use Bpstr\Elements\Html\Heading;
@@ -12,19 +12,17 @@ use Bpstr\Elements\Html\Heading;
  * Alert class for Bootstrap components.
  * Original: https://github.com/bpstr/components-php
  *
- * @bpstr Project Lifera <bpstr@gmx.tm>
- *
- * @see https://getbootstrap.com/docs/4.2/components/alerts/
+ * @link https://getbootstrap.com/docs/4.2/components/alerts/
  * @version 4.2.0
  */
-class Alert extends ContextualAvareFamilyPrefixedComponent {
+class Alert extends FamilyPrefixedContextualAwareComponent {
 
 	const ALERT_DISMISSIBLE = 'alert-dismissible';
-	const ALERT_HEADING		= 'alert-heading';
+	const ALERT_HEADING	= 'alert-heading';
 
-	public $tag = 'div';
+	protected $tag = 'div';
 
-	public $family = 'alert';
+	protected $family = 'alert';
 
 	/**
 	 * Creates an Alert component
@@ -33,11 +31,9 @@ class Alert extends ContextualAvareFamilyPrefixedComponent {
 	 * @param \Bpstr\Components\Bootstrap\Contextual $contextual (default: primary)
 	 */
 	public function __construct ($content, $contextual = NULL) {
-		parent::__construct($content, $contextual ?? Contextual::primary());
+		parent::__construct($content, $contextual);
 
-		$this->attributes['role'] = 'alert';
-
-		$this->appendContent($content);
+		$this->setAttribute('role', 'alert');
 	}
 
 	/**
@@ -70,19 +66,18 @@ class Alert extends ContextualAvareFamilyPrefixedComponent {
 	 *
 	 * @see https://getbootstrap.com/docs/4.2/components/alerts/#dismissing
 	 */
-	public function dismissible($button = NULL, $animate = true): self {
+	public function dismissible($button = '&times;', $animate = true): self {
 		$this->addClass(self::ALERT_DISMISSIBLE);
 		if ($animate) {
 			$this->addClass(Bootstrap::ANIMATE_FADE, Bootstrap::ANIMATE_SHOW);
 		}
 
-		if (empty($button)) {
-			$button = Bootstrap::CloseIcon();
+		if (!$button instanceof Element) {
+			$button = Bootstrap::CloseIcon($button);
 		}
 
-		if ($button instanceof Element) {
-			$button->addClass(Bootstrap::CLASS_CLOSE);
-		}
+		$button->addClass(Bootstrap::CLASS_CLOSE);
+		$button->data('dismiss', 'alert');
 
 		$this->appendContent($button);
 
@@ -91,5 +86,3 @@ class Alert extends ContextualAvareFamilyPrefixedComponent {
 
 
 }
-
-?>

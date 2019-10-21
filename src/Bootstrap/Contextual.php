@@ -2,9 +2,18 @@
 
 namespace Bpstr\Components\Bootstrap;
 
+use Bpstr\Components\Dictionary;
 use Bpstr\Components\Exception\BootstrapLogicException;
 
-class Contextual {
+/**
+ * Class Contextual
+ *
+ * @package Bpstr\Components\Bootstrap
+ * @link https://www.php.net/manual/en/class.splenum.php
+ */
+class Contextual extends Dictionary {
+
+	const __default = 'primary';
 
 	const PRIMARY = 'primary';
 	const SECONDARY = 'secondary';
@@ -14,6 +23,11 @@ class Contextual {
 	const INFO = 'info';
 	const LIGHT	= 'light';
 	const DARK = 'dark';
+
+	/**
+	 * @var string
+	 */
+	protected $contextual;
 
 	public static function primary() {
 		return new static(static::PRIMARY);
@@ -44,31 +58,8 @@ class Contextual {
 		return new static(static::LIGHT);
 	}
 
-
 	public static function dark() {
 		return new static(static::DARK);
-	}
-
-	protected $contextual;
-
-	public function __construct($color = NULL) {
-		if (!in_array($color, [
-			self::PRIMARY,
-			self::SECONDARY,
-			self::SUCCESS,
-			self::DANGER,
-			self::WARNING,
-			self::INFO,
-			self::LIGHT,
-			self::DARK
-		])) {
-			throw new BootstrapLogicException('No such contextual defined.');
-		}
-		$this->contextual = $color;
-	}
-
-	public function __toString() {
-		return $this->contextual;
 	}
 
 }

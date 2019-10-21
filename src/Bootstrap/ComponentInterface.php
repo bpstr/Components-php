@@ -2,7 +2,7 @@
 
 namespace Bpstr\Components\Bootstrap;
 
-use Bpstr\Elements\Html\ElementInterface;
+use Bpstr\Elements\Base\ElementInterface;
 
 interface ComponentInterface extends ElementInterface {
 

@@ -13,6 +13,9 @@ class Bootstrap {
 	const LABEL_PREVIOUS = 'Previous';
 	const LABEL_NEXT = 'Next';
 
+	/**
+	 * Bootstrap sizes.
+	 */
 	const SIZE_XSMALL = 'xs';
 	const SIZE_SMALL  = 'sm';
 	const SIZE_MEDIUM = 'md';
@@ -131,8 +134,13 @@ class Bootstrap {
 	 * @todo Move?
 	 *
 	 * @see \Bpstr\Components\Bootstrap\Component\Alert::dismissible
+	 *
+	 * @param string $symbol
+	 * @param string $label
+	 *
+	 * @return \Bpstr\Elements\Html\ElementInterface
 	 */
-	public static function CloseIcon ($symbol = "&#x2715;", $label = self::LABEL_CLOSE) {
+	public static function CloseIcon ($symbol = '&#x2715;', $label = self::LABEL_CLOSE) {
 		$span = Element::create('span', $symbol)->attr('aria-hidden', 'true');
 		return Element::create('button', $span)
 			->addClass(self::CLASS_CLOSE)

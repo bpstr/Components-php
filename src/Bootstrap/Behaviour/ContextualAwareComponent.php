@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpstr\Components\Bootstrap\Behaviours;
+namespace Bpstr\Components\Bootstrap\Behaviour;
 
 use Bpstr\Components\Bootstrap\Component;
 use Bpstr\Components\Bootstrap\Contextual;
 
-abstract class ContextualAvareComponent extends Component {
+abstract class ContextualAwareComponent extends Component {
 
 	public static function primary($content) {
 		return new static($content, Contextual::primary());
