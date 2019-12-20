@@ -4,7 +4,6 @@ namespace Bpstr\Components\Bootstrap\Component;
 
 use Bpstr\Components\Bootstrap;
 use Bpstr\Components\Bootstrap\Behaviour\FamilyPrefixedContextualAwareComponent;
-use Bpstr\Components\Bootstrap\Contextual;
 use Bpstr\Elements\Html\Element;
 use Bpstr\Elements\Html\Heading;
 

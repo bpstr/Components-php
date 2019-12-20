@@ -1,29 +1,16 @@
 {
   "name": "bpstr/components-php",
-  "description": "Generate bootstrap components",
-  "type": "project",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "BPSTR",
-      "email": "bpstr@gmx.tm"
-    }
-  ],
-  "prefer-stable": true,
-  "minimum-stability": "dev",
-  "config": {
-    "bin-dir": "bin"
+  "description": "A simple PHP library to render HTML elements.",
+  "autoload": {
+    "psr-4": {"Bpstr\\Components\\": "src/"}
   },
   "require": {
+    "php": "^7.2",
+    "ext-json": "*",
     "bpstr/elements-php": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^8"
-  },
-  "autoload": {
-    "psr-4": {
-      "Bpstr\\Components\\": "src/"
-    }
-  },
-  "autoload-dev": {}
+  }
 }

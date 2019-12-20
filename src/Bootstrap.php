@@ -2,6 +2,7 @@
 
 namespace Bpstr\Components;
 
+use Bpstr\Components\Bootstrap\Component;
 use Bpstr\Elements\Html\Element;
 
 class Bootstrap {

@@ -52,10 +52,27 @@ abstract class ContextualAwareComponent extends Component {
 	 * @param $content
 	 * @param \Bpstr\Components\Bootstrap\Contextual $contextual
 	 */
-	public function __construct($content, Contextual $contextual) {
+	public function __construct($content, Contextual $contextual = NULL) {
 		parent::__construct();
 		$this->appendContent($content);
 		$this->contextual = $contextual;
+	}
+
+	/**
+	 * @return \Bpstr\Components\Bootstrap\Contextual
+	 */
+	public function getContextual() {
+		return $this->contextual;
+	}
+
+	/**
+	 * @param \Bpstr\Components\Bootstrap\Contextual $contextual
+	 *
+	 * @return $this
+	 */
+	public function setContextual(Contextual $contextual) {
+		$this->contextual = $contextual;
+		return $this;
 	}
 
 }

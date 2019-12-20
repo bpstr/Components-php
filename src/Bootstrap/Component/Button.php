@@ -1,5 +1,7 @@
 <?php
 
+namespace Bpstr\Components\Bootstrap\Component;
+
 use Bpstr\Components\Bootstrap;
 use Bpstr\Components\Bootstrap\Behaviour\FamilyPrefixedContextualAwareComponent;
 use Bpstr\Components\Bootstrap\Contextual;
@@ -13,7 +15,6 @@ use Bpstr\Components\Bootstrap\Traits\ScalableComponentTrait;
  * @link https://getbootstrap.com/docs/4.2/components/buttons/
  * @version 4.2.0
  */
-
 class Button extends FamilyPrefixedContextualAwareComponent {
 	use AnchorableComponentTrait, ScalableComponentTrait;
 

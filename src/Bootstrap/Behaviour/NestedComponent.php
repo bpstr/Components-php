@@ -5,9 +5,19 @@ namespace Bpstr\Components\Bootstrap\Behaviour;
 use Bpstr\Components\Bootstrap;
 use Bpstr\Components\Bootstrap\Component;
 use Bpstr\Components\Bootstrap\ComponentInterface;
+use Bpstr\Elements\Base\ElementContentCollection;
 use Bpstr\Elements\Base\ElementInterface;
 
 class NestedComponent extends Component {
+
+	public function __construct($items, ElementInterface $item_wrrapper, ?string $active_item = NULL) {
+		$this->contents = new ElementContentCollection($items, $item_wrrapper);
+		parent::__construct();
+
+		if (!empty($active_item)) {
+			$this->activateKey($active_item);
+		}
+	}
 
 	public function prependItem(ElementInterface $item) {
 		array_unshift($this->contents[0], $item);

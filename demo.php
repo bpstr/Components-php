@@ -1,13 +1,13 @@
 <?php
 
-use Bpstr\Components\Bootstrap\Component\Alert;
-use Bpstr\Components\Bootstrap\Component\Badge;
-use Bpstr\Components\Bootstrap\Contextual;
+use Bpstr\Elements\Html\Document;
 
 require_once "vendor/autoload.php";
 
-echo Contextual::warning();
+$document = new Document('Checkout example · Bootstrap');
+$document->meta('author', 'bpstr.dev');
 
-//echo new Alert('A simple primary alert—check it out!');
 
-echo Badge::primary('Primary')->href('#');
+
+
+echo $document;

@@ -3,7 +3,6 @@
 namespace Bpstr\Components\Bootstrap;
 
 use Bpstr\Components\Dictionary;
-use Bpstr\Components\Exception\BootstrapLogicException;
 
 /**
  * Class Contextual
